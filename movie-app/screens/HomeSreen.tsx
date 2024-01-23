@@ -36,6 +36,8 @@ const HomeSreen: React.FC = () => {
                 <TrendingMovies trendingMovies={trending} />
             {/*    Upcoming Movies Row*/}
                 <MoviesList title={'Upcoming'} upComingMovies={upComing} data={upComing}/>
+            {/*    Trending Movies Row*/}
+                <MoviesList title={'Trending'} upComingMovies={upComing} data={upComing}/>
             </ScrollView>
         </View>
     )
