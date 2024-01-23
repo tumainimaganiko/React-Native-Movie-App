@@ -3,11 +3,12 @@ import {Dimensions, Image, StyleSheet, Text, TouchableWithoutFeedback} from "rea
 
 type MovieCardProps = {
     movieItem: number;
+    handleClick: () => void;
 }
 const { width, height } = Dimensions.get('window');
-const MovieCard: React.FC<MovieCardProps> = ({ movieItem }) => {
+const MovieCard: React.FC<MovieCardProps> = ({ movieItem, handleClick }) => {
     return (
-        <TouchableWithoutFeedback>
+        <TouchableWithoutFeedback onPress={handleClick}>
             <Image source={require('../assets/Captain_Marvel.jpeg')}
                    style={styles.imageStyles}
                    alt='Iron man'
