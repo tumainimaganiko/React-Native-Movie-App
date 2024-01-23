@@ -3,14 +3,18 @@ import {Platform, ScrollView, StyleSheet, Text, TouchableOpacity, View} from "re
 import {SafeAreaView} from "react-native-safe-area-context";
 import {StatusBar} from "expo-status-bar";
 import { Bars3CenterLeftIcon, MagnifyingGlassIcon } from 'react-native-heroicons/outline';
-import {customeStyles} from "../theme";
+import {customStyles} from "../theme";
 import TrendingMovies from "../components/trendingMovies";
 import trendingMovies from "../components/trendingMovies";
+import MoviesList from "../components/moviesList";
 
 const ios = Platform.OS == 'ios'
 const HomeSreen: React.FC = () => {
 
-    const [trending, setTrending] = useState([1,2,3,4,5,6,7,8,9])
+    const [trending, setTrending] = useState([1,2,3,4,5,6,7,8,9]);
+    const [upComing, setUpComing] = useState([1,2,3,4,5,6,7,8,9]);
+    const [topRated, setTopRated] = useState([1,2,3,4,5,6,7,8,9]);
+
     return (
         <View style={styles.container}>
             {/* Search Bar and Logo */}
@@ -19,7 +23,7 @@ const HomeSreen: React.FC = () => {
                 <View style={styles.innerContainer}>
                     <Bars3CenterLeftIcon size="30" strokeWidth={2} color='white'/>
                     <Text style={styles.logo}>
-                        <Text style={customeStyles.text}>M</Text>ovies
+                        <Text style={customStyles.text}>M</Text>ovies
                     </Text>
                     <TouchableOpacity>
                         <MagnifyingGlassIcon size="30" strokeWidth={2} color='white' />
@@ -30,6 +34,8 @@ const HomeSreen: React.FC = () => {
             <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={{paddingBottom: 10}}>
             {/* Trending movies carousel*/}
                 <TrendingMovies trendingMovies={trending} />
+            {/*    Upcoming Movies Row*/}
+                <MoviesList title={'Upcoming'} upComingMovies={upComing} data={upComing}/>
             </ScrollView>
         </View>
     )
