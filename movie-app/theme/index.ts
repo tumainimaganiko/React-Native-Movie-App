@@ -3,7 +3,7 @@ export const theme = {
     text: '#eab308'
 }
 
-export const customeStyles = {
+export const customStyles = {
     text: {color: theme.text},
     background: { background: theme.background}
 }
