@@ -61,3 +61,48 @@ const MovieScreen = () => {
 
 export default MovieScreen;
 
+const styles = StyleSheet.create({
+    scrollViewContainer: {
+        flex: 1,
+        backgroundColor: '#171717'
+    },
+    viewContainer: {
+        width: '100%'
+    },
+    safeAreaViewContainer: {
+        width: '100%',
+        zIndex: 50,
+        position: "absolute",
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        paddingHorizontal: 8,
+        marginTop: topMarging,
+    },
+    touchableOpacityButton: {
+        borderRadius: 10,
+        padding: 3,
+        backgroundColor: theme.background
+    },
+    linearGradientElement: {
+        width: width,
+        height: height * .4,
+        position: "absolute",
+        bottom: 0
+    },
+    movieDetailsView: {
+        marginTop: -height * .09,
+    },
+    title: {
+        textAlign: "center",
+        color: '#fff',
+        fontSize: 25,
+        fontWeight: "700",
+    },
+    status_release_runtime_Text: {
+        color: 'rgb(163 163 163)',
+        fontWeight: "600",
+        fontSize: 16,
+        textAlign: "center"
+    }
+})
