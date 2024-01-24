@@ -13,7 +13,6 @@ const HomeSreen: React.FC = () => {
 
     const [trending, setTrending] = useState([1,2,3,4,5,6,7,8,9]);
     const [upComing, setUpComing] = useState([1,2,3,4,5,6,7,8,9]);
-    const [topRated, setTopRated] = useState([1,2,3,4,5,6,7,8,9]);
 
     return (
         <View style={styles.container}>
@@ -37,7 +36,7 @@ const HomeSreen: React.FC = () => {
             {/*    Upcoming Movies Row*/}
                 <MoviesList title={'Upcoming'} upComingMovies={upComing} data={upComing}/>
             {/*    Trending Movies Row*/}
-                <MoviesList title={'Trending'} upComingMovies={upComing} data={upComing}/>
+                <MoviesList title={'Top Rated'} upComingMovies={upComing} data={upComing}/>
             </ScrollView>
         </View>
     )
