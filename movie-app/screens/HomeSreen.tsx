@@ -5,7 +5,6 @@ import {StatusBar} from "expo-status-bar";
 import { Bars3CenterLeftIcon, MagnifyingGlassIcon } from 'react-native-heroicons/outline';
 import {customStyles} from "../theme";
 import TrendingMovies from "../components/trendingMovies";
-import trendingMovies from "../components/trendingMovies";
 import MoviesList from "../components/moviesList";
 
 const ios = Platform.OS == 'ios'
