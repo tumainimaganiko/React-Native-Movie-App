@@ -14,8 +14,8 @@ const  TrendingMovies: React.FC<TrendingMoviesProps> = ({trendingMovies}) => {
 
     const navigation = useNavigation<any>();
 
-    const handleClick = () => {
-        navigation.navigate('Movies');
+    const handleClick = (item: number) => {
+        navigation.navigate('Movies', item);
     }
     return (
         <View style={styles.container}>
