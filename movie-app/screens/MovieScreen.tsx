@@ -4,7 +4,7 @@ import {useNavigation, useRoute} from "@react-navigation/native";
 import {SafeAreaView} from "react-native-safe-area-context";
 import {ChevronLeftIcon} from "react-native-heroicons/outline";
 import {HeartIcon} from "react-native-heroicons/solid";
-import {customStyles, theme} from "../theme";
+import { theme} from "../theme";
 import {LinearGradient} from "expo-linear-gradient";
 
 const { width, height } = Dimensions.get('window');
@@ -53,6 +53,22 @@ const MovieScreen = () => {
             {/*    Status, Release, Runtime*/}
                 <Text style={styles.status_release_runtime_Text}>
                     Released · 2020 · 170 min
+                </Text>
+                {/* Genre */}
+                <View style={styles.genreView}>
+                    <Text style={styles.genreTitle}>
+                        Action ·
+                    </Text>
+                    <Text style={styles.genreTitle}>
+                        Thriller ·
+                    </Text>
+                    <Text style={styles.genreTitle}>
+                        Comedy ·
+                    </Text>
+                </View>
+            {/*    Description*/}
+                <Text style={styles.descriptionText}>
+                    Scott finds a strange suit, which turns him into “Ant-Man.” Eventually, Scott must use the suit to stop the evil Hydra organization from using the shrinking technology to control the world. ANT-MAN is funny, goofy and exciting, with a touching father-daughter relationship at its center.
                 </Text>
             </View>
         </ScrollView>
@@ -104,5 +120,19 @@ const styles = StyleSheet.create({
         fontWeight: "600",
         fontSize: 16,
         textAlign: "center"
+    },
+    genreView: {
+        flexDirection: "row",
+        justifyContent: "center",
+        marginHorizontal: 15,
+    },
+    genreTitle: {
+        color: 'rgb(163 163 163)',
+        fontWeight: "600",
+        textAlign: "center"
+    },
+    descriptionText: {
+        color: 'rgb(163 163 163)',
+        marginHorizontal: 4
     }
 })
