@@ -6,6 +6,7 @@ import {ChevronLeftIcon} from "react-native-heroicons/outline";
 import {HeartIcon} from "react-native-heroicons/solid";
 import { theme} from "../theme";
 import {LinearGradient} from "expo-linear-gradient";
+import Cast from "../components/cast";
 
 const { width, height } = Dimensions.get('window');
 const ios = Platform.OS === 'ios';
@@ -14,6 +15,7 @@ const MovieScreen = () => {
 
     const { params: items } = useRoute();
     const navigation = useNavigation();
+    const [cast, setCast] = useState([1,2,3,4,5,6,7,8,9]);
     const [isFavourite, setIsFavourite] = useState(false)
     let movieName = 'Ant-Man and The Wasp: Quantumania';
 
@@ -71,6 +73,7 @@ const MovieScreen = () => {
                     Scott finds a strange suit, which turns him into “Ant-Man.” Eventually, Scott must use the suit to stop the evil Hydra organization from using the shrinking technology to control the world. ANT-MAN is funny, goofy and exciting, with a touching father-daughter relationship at its center.
                 </Text>
             </View>
+            <Cast cast={cast} />
         </ScrollView>
     )
 }
