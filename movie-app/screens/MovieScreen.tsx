@@ -100,7 +100,7 @@ const styles = StyleSheet.create({
     },
     touchableOpacityButton: {
         borderRadius: 10,
-        padding: 3,
+        padding: 5,
         backgroundColor: theme.background
     },
     linearGradientElement: {
@@ -122,7 +122,8 @@ const styles = StyleSheet.create({
         color: 'rgb(163 163 163)',
         fontWeight: "600",
         fontSize: 16,
-        textAlign: "center"
+        textAlign: "center",
+        marginVertical: 10,
     },
     genreView: {
         flexDirection: "row",
@@ -132,10 +133,11 @@ const styles = StyleSheet.create({
     genreTitle: {
         color: 'rgb(163 163 163)',
         fontWeight: "600",
-        textAlign: "center"
+        textAlign: "center",
+        marginVertical: 10,
     },
     descriptionText: {
         color: 'rgb(163 163 163)',
-        marginHorizontal: 4
+        margin: 10,
     }
 })
